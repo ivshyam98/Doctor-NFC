@@ -1,14 +1,42 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Doctor - MHC
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+          <ion-avatar item-center>
+              <img src="../../assets/imgs/doc1.jpg">
+            </ion-avatar>
+      </ion-item>
+      <ion-item >
+        <h2><b>Dr. Shrikanth Kamat</b></h2>
+      </ion-item>
+      <ion-item>
+          <h2>Qual: MBBS, M.D.</h2>
+        </ion-item>
+       <ion-item>
+         <h2>Location: Bangalore</h2>
+       </ion-item>
+    </ion-list>
+  </ion-card>
+  <ion-card *ngIf="docAccess">
+    <ion-item>
+      You are allowed to access 
+    </ion-item>
+    <ion-item>
+      Patient : <b>{{docAccess}}</b>
+    </ion-item>
+    <ion-item>
+        At Time :
+      </ion-item>
+      <ion-item>
+          {{allowTime}}
+      </ion-item>
+    </ion-card>
 </ion-content>
