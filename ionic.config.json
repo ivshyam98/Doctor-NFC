@@ -1,0 +1,7 @@
+{
+  "name": "nfcpat",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
