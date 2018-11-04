@@ -23,12 +23,14 @@ export class HomePage {
     
   "$class": "org.med.chain.AllowDoctorWrite",
   "patient": "string",
-  "doctorId": "EHR_doc_$1",
+  "doctorId": "EHR_doc_$6",
   "timestamp": "2018-11-02T13:06:34.842Z"
 
 }
+doctorId:any;
 allowTime:any;
   constructor(public http: HttpClient,public navParams: NavParams,public nfc: NFC,public ndef: Ndef,public navCtrl: NavController) {
+    this.doctorId=this.body.doctorId
     this.nfc.addNdefListener(() => {
       console.log('successfully attached ndef listener');
       //alert('successfully attached ndef listener')
